@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context="com.excelimpex.Activities.ActivityLogin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:id="@+id/ivBack"
+            android:padding="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"/>
+    </RelativeLayout>
+
+    <View
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="false"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"></View>
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <RelativeLayout
+            android:visibility="visible"
+            android:padding="10dp"
+            android:id="@+id/rldistributor"
+            android:background="@drawable/rectanglered"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+
+        <TextView
+
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/proxima_nova"
+            android:layout_toLeftOf="@+id/add"
+            android:background="@null"
+            android:visibility="visible"
+            android:id="@+id/edtDistributorname"
+
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:hint="Select Distributor"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:textColorHint="@color/login_text_color"
+            android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/add"
+
+                android:padding="2dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_width="20dp"
+                android:src="@mipmap/ic_add"
+                android:layout_height="20dp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:id="@+id/rlproducts"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectanglered"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+
+            <TextView
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/proxima_nova"
+                android:layout_toLeftOf="@+id/addpdt"
+                android:background="@null"
+                android:visibility="visible"
+                android:id="@+id/edtProductname"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:hint="Add Product"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:textColorHint="@color/login_text_color"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/addpdt"
+
+                android:padding="2dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_width="20dp"
+                android:src="@mipmap/ic_add"
+                android:layout_height="20dp" />
+        </RelativeLayout>
+
+
+        <com.excelimpex.Utils.ExpandableHeightListView
+            android:id="@+id/lvProduct"
+
+            android:divider="@null"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.excelimpex.Utils.ExpandableHeightListView>
+
+        <LinearLayout
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:id="@+id/llTotal"
+            android:layout_marginTop="20dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_marginRight="10dp"
+
+                    android:fontFamily="@font/gotham_bold"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/black"
+                    android:text="Total Amount : "
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/txtTotal"
+                    android:fontFamily="@font/gotham_bold"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/red"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_toRightOf="@+id/total"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/gst"
+                    android:layout_marginRight="10dp"
+
+                    android:fontFamily="@font/gotham_bold"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/black"
+                    android:text="GST : "
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_toRightOf="@+id/gst"
+                    android:id="@+id/txtGst"
+                    android:fontFamily="@font/gotham_bold"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/red"
+                    android:text="18%"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"/>
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_marginTop="15dp"
+                android:background="@color/view_color"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/after"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="10dp"
+
+                    android:fontFamily="@font/gotham_bold"
+                    android:text="TotalAmount + GST : "
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:gravity="right"
+                    android:layout_toRightOf="@+id/after"
+                    android:id="@+id/txtaftergst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/gotham_bold"
+                    android:text=""
+                    android:textColor="@color/red"
+                    android:textSize="18sp" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+        <Button
+            android:fontFamily="@font/gotham_bold"
+            android:layout_marginBottom="40dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/btnSubmit"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorAccent"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="Submit" />
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

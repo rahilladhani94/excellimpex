@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:textSize="20sp"
+        android:fontFamily="@font/gotham_bold"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Select Category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/active_blue"/>
+
+<ListView
+    android:layout_marginTop="10dp"
+    android:divider="@color/view_color"
+    android:dividerHeight="1dp"
+    android:id="@+id/lv"
+    android:layout_width="match_parent"
+    android:layout_height="400dp">
+
+</ListView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+
+        >
+
+        <TextView
+            android:fontFamily="@font/gotham_bold"
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
+            android:layout_weight="1"
+
+            android:text="Dismiss"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
